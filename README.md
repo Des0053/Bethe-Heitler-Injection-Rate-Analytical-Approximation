@@ -28,7 +28,7 @@ Class input parameters:
 
 The class also calculates the normalization, A, and the slope, s, of the injection rate function, Q_inj, given as:
 
-$q_{\rm BH}(\gamma_e)= A(\gamma_p,  \epsilon) \cdot \exp \left[ -\frac{\left[\log_{10}\left(\frac{\gamma_e}{\gamma_{e,\rm pk}}\right)\right]^{ p(\gamma_p \epsilon)}}{2 {a_1}^2}- a_2^2 \left(\frac{\gamma_{e, \rm pk}}{\gamma_e}-1\right)^2 -a_3 \frac{\gamma_e}{\gamma_{e, \rm cr}}  \right] $
+$Q_{inj}(\gamma_e)= \mathbf{A(\gamma_p,  \epsilon)} \cdot \exp \left[ -\frac{\left[\log_{10}\left(\frac{\gamma_e}{\gamma_{e,\rm pk}}\right)\right]^{ \mathbf{s(\gamma_p \epsilon)}}}{2 {a_1}^2}- a_2^2 \left(\frac{\gamma_{e, \rm pk}}{\gamma_e}-1\right)^2 -a_3 \frac{\gamma_e}{\gamma_{e, \rm cr}}  \right] $
 
 
 The modelling and properties of the function are desrcibed in the paper "A closer look at the electromagnetic signatures of Bethe-Heitler pair production process in blazars" by D. Karavola and M. Petropoulou (to be submitted).
