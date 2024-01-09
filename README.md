@@ -12,11 +12,11 @@ Class input parameters:
  * g_p: proton Lorentz factor value in logarithmic scale
 
  * R: radius of the source in lenear scale (cm)
- 
+
  *ind: unit selection:
        - 0: $s^{-1}$
        - 1: $cm^{-3} s^{-1}$
-       - 2: $ \frac{1}{\tilde V \tilde t}$ with $\tilde V= \frac{V (cgs)}{ \sigma_T R}$ and $\tilde t= t \frac{c}{R}$
+       - 2: $\frac{1}{\tilde V \tilde t}$ with $\tilde V= \frac{V (cgs)}{ \sigma_T R}$ and $\tilde t= t \frac{c}{R}$
 
 The modelling and properties of the function are desrcibed in the paper "A closer look at the electromagnetic signatures of Bethe-Heitler pair production process in blazars" by D. Karavola and M. Petropoulou (to be submitted).
 
