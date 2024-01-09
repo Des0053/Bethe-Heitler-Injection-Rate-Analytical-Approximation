@@ -19,7 +19,7 @@ Class input parameters:
 
     - 1: $cm^{-3} s^{-1}$
 
-    - 2: $(\tilde V \tilde t)^{-1}$ with $\tilde V= V (cgs) (\sigma_T R)^{-1} $ and $\tilde t (s)= t \frac{c}{R}$
+    - 2: $(\tilde V \tilde t)^{-1}$ with $\tilde V= V (cm^{-3}) (\sigma_T R)^{-1}$ and $\tilde t (s)= t \frac{c}{R}$
 
    Class output:
     * BH_inj_rate: q_BH variable returns an array of the BH injection rate computed on each point on the $\gamma_e$ (g in script symbols) given by the user **for single photon-single proton** interaction.
