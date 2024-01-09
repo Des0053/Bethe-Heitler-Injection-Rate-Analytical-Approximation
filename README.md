@@ -13,7 +13,7 @@ Class input parameters:
 
  * R: radius of the source in lenear scale (cm)
 
- *ind: unit selection:
+ * ind: unit selection:
        - 0: $s^{-1}$
        - 1: $cm^{-3} s^{-1}$
        - 2: $\frac{1}{\tilde V \tilde t}$ with $\tilde V= \frac{V (cgs)}{ \sigma_T R}$ and $\tilde t= t \frac{c}{R}$
