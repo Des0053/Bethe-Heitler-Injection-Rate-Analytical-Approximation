@@ -24,7 +24,12 @@ Class input parameters:
    Class output:
     * BH_inj_rate: q_BH variable returns an array of the BH injection rate computed on each point on the $\gamma_e$ (g in script symbols) given by the user **for single photon-single proton** interaction.
    
-    * BH_inj_rate_arr: q_BH variable returns an array of size [len(x), len(g)] the BH injection rate computed on each point on the $\gamma_e$ (g in script symbols) given by the user interaction of photon of various energies with a single photon. The photon energis have to be given in an array and in a logarithmic scale. Each row of the output array describes the produced pair distribution across the $\gamma_e$ grid, by the interaction of the photon with a single photon of a specific energy.
+    * BH_inj_rate_arr: q_BH variable returns an array of size [len(x), len(g)] that refers to the BH injection rate computed for a single photon of $\epsilon \in x$ energies with a single photon. The photon energies have to be given in an array and in a logarithmic scale. Each row of the output array describes the produced pair distribution across the $\gamma_e$ grid, by the interaction of the photon with a single photon of a specific energy.
+
+The class also calculates the normalization, A, and the slope, s, of the injection rate function, Q_inj, given as:
+
+$q_{\rm BH}(\gamma_e)= A(\gamma_p,  \epsilon) \cdot \exp \left[ -\frac{\left[\log_{10}\left(\frac{\gamma_e}{\gamma_{e,\rm pk}}\right)\right]^{ p(\gamma_p \epsilon)}}{2 {a_1}^2}- a_2^2 \left(\frac{\gamma_{e, \rm pk}}{\gamma_e}-1\right)^2 -a_3 \frac{\gamma_e}{\gamma_{e, \rm cr}}  \right] $
+
 
 The modelling and properties of the function are desrcibed in the paper "A closer look at the electromagnetic signatures of Bethe-Heitler pair production process in blazars" by D. Karavola and M. Petropoulou (to be submitted).
 
