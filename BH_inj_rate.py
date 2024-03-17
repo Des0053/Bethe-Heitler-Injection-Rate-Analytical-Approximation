@@ -61,7 +61,7 @@ class BH_inj_rate:
         params=[2., (1.23*E)**(-1), 0.47, 0.468, 0.43, 0.465, 0.95, 1., 0.1, 0*10**(-5), 0.14, 0.25, gamma_p*15., 1.75, 1]    
         int_thres, x0, a1, a2, a2_b, a3, cor1a, cor1b, cor2a, cor2b, cor2b_thres, cor2c, x_c, p_lim, AM_flag= params
                     
-        A=10**(BH_inj_fun.A_norm(self, self.x, self.g_p, self.R))
+        A=10**(BH_inj_rate.A_norm(self, self.x, self.g_p, self.R))
         res=np.zeros(len(gamma))
         if gamma_p*E<=2. or gamma_p*E*AM_flag>10**4.:
             pass
