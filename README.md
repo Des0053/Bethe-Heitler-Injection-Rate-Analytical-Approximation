@@ -30,6 +30,8 @@ The class also calculates the normalization, $A$, and the slope, $s$, of the inj
 
 $Q_{inj}(\gamma_e)= A(\gamma_p,  \epsilon) \cdot \exp \left[ -\frac{\left[\log_{10}\left(\frac{\gamma_e}{\gamma_{e,\rm pk}}\right)\right]^{ \mathbf{s(\gamma_p \epsilon)}}}{2 {a_1}^2}- a_2^2 \left(\frac{\gamma_{e, \rm pk}}{\gamma_e}-1\right)^2 -a_3 \frac{\gamma_e}{\gamma_{e, \rm cr}}  \right] $
 
+**Comment:** The above function was modelled using the Leptohadronic, radiative, Monte-Carlo code ATHEvA (Mastichiadis et. al (2005), Dimitrakoudis et. al (2012)). The aforementioned code takes into account interactions between protons and photons with interaction energy, $\gamma_p E$, values $\leq 10^4$. As a result the function, $q_{BH}$, described above, has the same limitation and has been benchmarked for $\gamma_p E \leq 10^4$. This limitation is embeded by the AM_flag. When this flag is equal to 1 (default value), $\gamma_p E >10^4$ interactions are not taken into account. The user can change the AM_flag to 0 to include interaction of $\gamma_p E>10^4$ but with caution since the validity of the function in that regime is not known.   
+
 
 The modelling, properties and benchmarking of the function are included in the paper "A closer look at the electromagnetic signatures of Bethe-Heitler pair production process in blazars" by D. Karavola and M. Petropoulou, 2024 (submitted to JCAP, arxiv:2401.05534).
 
