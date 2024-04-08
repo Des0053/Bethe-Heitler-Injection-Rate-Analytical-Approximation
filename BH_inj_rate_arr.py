@@ -12,15 +12,15 @@ class BH_inj_rate_arr:
     def __init__(self, g, x, g_p, R, ind):
         log_gpE=g_p+x
         
-        self.g=g
-        self.x=x
-        self.g_p=g_p
-        self.R=R
-        self.ind=ind
-        self.log_gpE=log_gpE
+        self.g=g  #pair Lorentz factor in logarithm
+        self.x=x  #photon energy in m_ec^2 units, in logarithm
+        self.g_p=g_p #proton Lorentz factor in logarithm
+        self.R=R #source radius in linera scale
+        self.ind=ind #index that defines the units of the injection rate
+        self.log_gpE=log_gpE #interaction energy γ_p*E in logarithm
         self.q_BH=[]
   
-        if self.ind==0:# options: "cgs_rate" for 1/s units, "cgs_dens_rate" for 1/(cm^3 s) units, "AM_dens_rate" for ATHEvA 1/(V t) units    
+        if self.ind==0:# options: "0" for 1/s units , "1" for 1/(cm^3 s) units, "2" for ATHEvA 1/(V t) units  
             self.tr=4.*math.pi*c_light*R/(3.*sigma_T)
         elif self.ind==1:
             self.tr=c_light/(sigma_T*R**2)
@@ -31,7 +31,7 @@ class BH_inj_rate_arr:
         self.A_norm
         self.Q_inj(g, x, g_p, R, ind)
 
-    def slope(self, log_gpE):
+    def slope(self, log_gpE): #Injection Rate slope p(γ_p*E)
         params=[0.6586, 0.65, -0.06073489219556636, 0.9893670856189293, 0.94]
         x0, ss, b, a, ss2= params
         const=2-b*x0**ss2-a/np.exp(1)*x0**(-ss)
@@ -61,7 +61,10 @@ class BH_inj_rate_arr:
         
         params=[2., (1.23*E)**(-1), 0.47, 0.468, 0.465, 0.95, 1., 0.1, 0*10**(-5), 0.14, 0.25, gamma_p*15., 1.75, 1]    
         int_thres, ge_pk, a1_1, a1_2, a1_3, a2_1, a2_2, a3_1, a3_2, a3_3, a3_4, gp_c, p_lim, AM_flag= params
-                    
+        #a1_i are all the branches of the a1 parameter
+        #a2_i are all the branches of the a2 parameter
+        #a3_i are all the branches of the a3 parameter
+        
         res=np.zeros([len(E), len(gamma)])
         for i in range(0,len(E)):
             A=10**(self.A_norm(self.x[i], self.g_p, self.R))
